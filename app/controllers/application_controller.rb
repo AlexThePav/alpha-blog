@@ -10,17 +10,17 @@ class ApplicationController < ActionController::Base
     !!current_user # converts to boolean, returns true if have current_user, false if not
   end
 
-  def require_user
-    if !logged_in?
-      flash[:danger] = "You must be logged in to perform that action"
-      redirect_to root_path
-    end
-  end
-
-  def require_same_user
-    if current_user != @article.user
-      flash[:danger] = "You can only edit or delete your own articles"
-      redirect_to root_path
-    end
-  end
+  # def require_user
+  #   if !logged_in?
+  #     flash[:danger] = "You must be logged in to perform that action"
+  #     redirect_to root_path
+  #   end
+  # end
+  #
+  # def require_same_user
+  #   if current_user != @article.user && !@current_user.admin?
+  #     flash[:danger] = "You can only edit or delete your own articles"
+  #     redirect_to root_path
+  #   end
+  # end
 end

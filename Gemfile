@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '1.0.0'
-
+gem 'rails-controller-testing' # assert_template moved to rails 5 in this gem
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
